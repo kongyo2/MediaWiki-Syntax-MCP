@@ -2,6 +2,10 @@
 
 <a href="https://deepwiki.com/kongyo2/MediaWiki-Syntax-MCP"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
 
+<a href="https://glama.ai/mcp/servers/@kongyo2/MediaWiki-Syntax-MCP">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@kongyo2/MediaWiki-Syntax-MCP/badge" alt="MediaWiki Syntax Server MCP server" />
+</a>
+
 A comprehensive MediaWiki syntax documentation server built with [FastMCP](https://github.com/punkpeye/fastmcp).
 
 This MCP server provides complete MediaWiki markup syntax documentation by dynamically fetching and consolidating information from official MediaWiki help pages. It enables LLMs to access up-to-date and comprehensive MediaWiki syntax information.
