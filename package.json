@@ -26,12 +26,8 @@
   "license": "MIT",
   "description": "MediaWiki Syntax MCP Server - Provides comprehensive MediaWiki markup syntax documentation",
   "dependencies": {
-    "axios": "^1.7.9",
-    "axios-retry": "^4.5.0",
     "fastmcp": "^1.27.3",
-    "p-retry": "^6.2.1",
-    "zod": "^3.24.4",
-    "zod-to-json-schema": "^3.24.6"
+    "zod": "^3.24.4"
   },
   "release": {
     "branches": [
