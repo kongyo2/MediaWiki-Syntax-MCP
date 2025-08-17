@@ -1,5 +1,5 @@
 {
-  "name": "fastmcp-boilerplate",
+  "name": "mediawiki-syntax-mcp",
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
@@ -13,16 +13,18 @@
   "keywords": [
     "fastmcp",
     "mcp",
-    "boilerplate"
+    "mediawiki",
+    "syntax",
+    "documentation"
   ],
   "repository": {
-    "url": "https://github.com/kongyo2/fastmcp-boilerplate"
+    "url": "https://github.com/kongyo2/mediawiki-syntax-mcp"
   },
   "author": "kongyo2",
-  "homepage": "https://glama.ai/mcp",
+  "homepage": "https://github.com/kongyo2/mediawiki-syntax-mcp",
   "type": "module",
   "license": "MIT",
-  "description": "A boilerplate for FastMCP",
+  "description": "MediaWiki Syntax MCP Server - Provides comprehensive MediaWiki markup syntax documentation",
   "dependencies": {
     "axios": "^1.7.9",
     "axios-retry": "^4.5.0",

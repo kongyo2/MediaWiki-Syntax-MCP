@@ -1,22 +1,28 @@
-# FastMCP Boilerplate
+# MediaWiki Syntax MCP Server
 
-A boilerplate for [FastMCP](https://github.com/punkpeye/fastmcp).
+A comprehensive MediaWiki syntax documentation server built with [FastMCP](https://github.com/punkpeye/fastmcp).
 
-This boilerplate is a good starting point for building an MCP server. It includes a basic setup for testing, linting, formatting, and publishing to NPM.
+This MCP server provides complete MediaWiki markup syntax documentation by dynamically fetching and consolidating information from official MediaWiki help pages. It enables LLMs to access up-to-date and comprehensive MediaWiki syntax information.
+
+## Features
+
+- **Comprehensive Coverage**: Fetches syntax information from multiple official MediaWiki help pages
+- **Dynamic Updates**: Always provides current documentation from MediaWiki.org
+- **Clean Content**: Extracts only the essential syntax information, removing navigation and metadata
+- **Structured Output**: Organizes syntax information by categories (formatting, links, tables, etc.)
 
 ## Development
 
 To get started, clone the repository and install the dependencies.
 
 ```bash
-git clone https://github.com/punkpeye/fastmcp-boilerplate.git
-cd fastmcp-boilerplate
+git clone https://github.com/kongyo2/mediawiki-syntax-mcp.git
+cd mediawiki-syntax-mcp
 npm install
 npm run dev
 ```
 
-> [!NOTE]
-> If you are starting a new project, you may want to fork [fastmcp-boilerplate](https://github.com/punkpeye/fastmcp-boilerplate) and start from there.
+## Usage
 
 ### Start the server
 
@@ -34,15 +40,20 @@ npm run dev
 
 This will start the server and allow you to interact with it using CLI.
 
-### Testing
+### Available Tools
 
-A good MCP server should have tests. However, you don't need to test the MCP server itself, but rather the tools you implement.
+The server provides one main tool:
+
+- **get-mediawiki-syntax**: Retrieves comprehensive MediaWiki syntax documentation
+  - `format` (optional): "complete" for full documentation (default) or "summary" for condensed version
+
+### Testing
 
 ```bash
 npm run test
 ```
 
-In the case of this boilerplate, we only test the implementation of the `add` tool.
+The tests verify that the server module can be properly imported and initialized.
 
 ### Linting
 
@@ -62,13 +73,19 @@ Use `npm run format` to format the code.
 npm run format
 ```
 
-### GitHub Actions
+## MediaWiki Syntax Coverage
 
-This repository has a GitHub Actions workflow that runs linting, formatting, tests, and publishes package updates to NPM using [semantic-release](https://semantic-release.gitbook.io/semantic-release/).
+This server fetches syntax documentation from the following official MediaWiki help pages:
 
-In order to use this workflow, you need to:
+- **Text Formatting**: Basic text formatting, headings, lists, and markup
+- **Links**: Internal links, external links, interwiki links, and piped links  
+- **Tables**: Table creation and formatting syntax
+- **Images and Media**: Image embedding, sizing, and media file syntax
+- **Templates**: Template usage, parameters, and transclusion
+- **Categories**: Category assignment and organization
+- **Magic Words**: Variables, parser functions, and behavior switches
+- **Citations and References**: Reference and citation syntax
 
-1. Add `NPM_TOKEN` to the repository secrets
-   1. [Create a new automation token](https://www.npmjs.com/settings/punkpeye/tokens/new)
-   2. Add token as `NPM_TOKEN` environment secret (Settings → Secrets and Variables → Actions → "Manage environment secrets" → "release" → Add environment secret)
-1. Grant write access to the workflow (Settings → Actions → General → Workflow permissions → "Read and write permissions")
+## Configuration
+
+The server is designed to work out of the box with no configuration required. It dynamically fetches content from MediaWiki.org using the MediaWiki API, similar to the approach used in [wikipedia-mcp](https://github.com/Rudra-ravi/wikipedia-mcp).
