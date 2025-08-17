@@ -1,4 +1,4 @@
-import { expect, it, describe } from "vitest";
+import { describe, expect, it } from "vitest";
 
 describe("MediaWiki Syntax Server", () => {
   it("should be able to import the server module", async () => {

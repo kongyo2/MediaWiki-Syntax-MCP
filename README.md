@@ -78,7 +78,7 @@ npm run format
 This server fetches syntax documentation from the following official MediaWiki help pages:
 
 - **Text Formatting**: Basic text formatting, headings, lists, and markup
-- **Links**: Internal links, external links, interwiki links, and piped links  
+- **Links**: Internal links, external links, interwiki links, and piped links
 - **Tables**: Table creation and formatting syntax
 - **Images and Media**: Image embedding, sizing, and media file syntax
 - **Templates**: Template usage, parameters, and transclusion
